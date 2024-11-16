@@ -1,0 +1,18 @@
+# Основные зависимости
+browser-use>=0.1.0
+pandas>=2.0.0
+openpyxl>=3.0.7
+python-dotenv>=0.19.0
+
+# LangChain и провайдеры моделей
+langchain-core>=0.1.0
+langchain-openai>=0.0.2
+langchain-anthropic>=0.0.1
+langchain-community>=0.0.10
+
+# GUI и шифрование
+customtkinter>=5.2.0
+cryptography>=41.0.0
+
+# Для работы с Ollama
+# ollama>=0.1.0

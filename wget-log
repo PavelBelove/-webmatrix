@@ -1,0 +1,5 @@
+--2024-11-15 21:09:45--  https://repo.protonvpn.com/debian/public_key.asc
+Resolving repo.protonvpn.com (repo.protonvpn.com)... 188.114.99.233, 188.114.98.233
+Connecting to repo.protonvpn.com (repo.protonvpn.com)|188.114.99.233|:443... connected.
+OpenSSL: error:0A00010B:SSL routines::wrong version number
+Unable to establish SSL connection.

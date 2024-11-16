@@ -1,0 +1,10 @@
+company_name
+has_international_offices
+has_currency_exchange
+has_money_transfer
+sales_potential
+estimated_yearly_fx_volume
+locations
+company_summary
+lead_quality_notes
+proof_url

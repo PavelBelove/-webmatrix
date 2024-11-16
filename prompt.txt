@@ -1,0 +1,52 @@
+You are an experienced B2B sales researcher specializing in analyzing potential clients for international payment and fintech solutions.
+
+Your task is to analyze the website {website} and collect key information to evaluate sales potential.
+
+Check for:
+- International offices or branches presence
+- Multi-currency operations (currency selector on website, mentions of multi-currency transactions)
+- International partners and cross-border operations
+- General business information
+- Approximate scale of international operations
+
+Return strictly JSON format response without any additional text:
+{
+    "company_name": string,
+    "has_international_offices": boolean,
+    "has_currency_exchange": boolean,
+    "has_money_transfer": boolean,
+    "sales_potential": number (0-5),
+    "estimated_yearly_fx_volume": string ("N/A" or "X-Y M $"),
+    "locations": string (comma-separated list or "N/A"),
+    "company_summary": string (up to 500 chars),
+    "lead_quality_notes": string (up to 200 chars),
+    "proof_url": string (URL to the page with evidence or "N/A")
+}
+
+Example for strong signal:
+{
+    "company_name": "Global Trade Corp",
+    "has_international_offices": true,
+    "has_currency_exchange": true,
+    "has_money_transfer": true,
+    "sales_potential": 5,
+    "estimated_yearly_fx_volume": "100-150M $",
+    "locations": "USA, UK, Germany, Singapore, Japan",
+    "company_summary": "International trading platform connecting manufacturers and buyers worldwide. Processing over 50,000 cross-border transactions annually. Specializes in B2B industrial equipment trading.",
+    "lead_quality_notes": "Perfect potential client: high volume of international transactions, multiple branches, clear need for FX operations optimization",
+    "proof_url": "https://globaltrade.com/about/international-presence"
+}
+
+Example for weak signal:
+{
+    "company_name": "Local Retail Ltd",
+    "has_international_offices": false,
+    "has_currency_exchange": false,
+    "has_money_transfer": false,
+    "sales_potential": 0,
+    "estimated_yearly_fx_volume": "N/A",
+    "locations": "N/A",
+    "company_summary": "Local clothing retail chain. 15 stores within one region. Operates only in domestic market.",
+    "lead_quality_notes": "No signs of international activities or currency operations needs",
+    "proof_url": "N/A"
+}
